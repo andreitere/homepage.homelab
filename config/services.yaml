@@ -1,0 +1,56 @@
+- Server:
+      - SpeedTest:
+            href: "{{HOMEPAGE_VAR_SPEEDTEST_HREF}}"
+            widget:
+                type: speedtest
+                url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+                bitratePrecision: 3 # optional, default is 0
+      - AdGuard:
+            url: "{{HOMEPAGE_VAR_ADGUARD_HREF}}"
+            widget:
+                type: adguard
+                url: "{{HOMEPAGE_VAR_ADGUARD_URL}}"
+                username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+                password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+
+- Media:
+      - Plex:
+            icon: plex.png
+            href: "{{HOMEPAGE_VAR_PLEX_HREF}}"
+            siteMonitor: "{{HOMEPAGE_VAR_PLEX_HREF}}"
+            description: Watch movies and TV shows.
+            widget:
+                type: tautulli
+                url: "{{HOMEPAGE_VAR_PLEX_TATUTULLI_URL}}"
+                key: "{{HOMEPAGE_VAR_PLEX_TOKEN}}"
+                enableUser: true # optional, defaults to false
+                showEpisodeNumber: true # optional, defaults to false
+                expandOneStreamToTwoRows: false # optional, defaults to true
+      - Torrent:
+            icon: qbittorrent.png
+            description: Torrent downloader
+            href: "{{HOMEPAGE_VAR_QBITT_HREF}}"
+            siteMonitor: "{{HOMEPAGE_VAR_QBITT_HREF}}"
+            widget:
+                type: qbittorrent
+                url: "{{HOMEPAGE_VAR_QBITT_URL}}"
+                username: "{{HOMEPAGE_VAR_QBITT_USERNAME}}"
+                password: "{{HOMEPAGE_VAR_QBITT_PASSWORD}}"
+      - Series:
+            icon: sonarr.png
+            description: Series manager
+            href: "{{HOMEPAGE_VAR_SONARR_HREF}}"
+            siteMonitor: "{{HOMEPAGE_VAR_SONARR_HREF}}"
+            widget:
+                type: sonarr
+                url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+                key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
+      - Movies:
+            icon: radarr.png
+            description: Movies manager
+            href: "{{HOMEPAGE_VAR_RADARR_HREF}}"
+            siteMonitor: "{{HOMEPAGE_VAR_RADARR_HREF}}"
+            widget:
+                type: radarr
+                url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+                key: "{{HOMEPAGE_VAR_RADARR_KEY}}"

@@ -1,0 +1,20 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+useEqualHeights: true
+layout:
+  - Media:
+      style: row
+      columns: 2
+  - Server:
+      style: row
+      columns: 4
+
+headerStyle: underlined
+
+providers:
+  openweathermap: "{{HOMEPAGE_VAR_ADGUARD_HREF}}"
+
+color: slate
+
