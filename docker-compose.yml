@@ -4,6 +4,8 @@ services:
     homepage:
         image: ghcr.io/gethomepage/homepage:latest
         container_name: homepage
+        ports:
+          - 5999:3000
         volumes:
             - ./config:/app/config
         restart: unless-stopped
