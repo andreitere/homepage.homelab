@@ -2,15 +2,9 @@ version: "3.8"
 
 services:
     homepage:
-        image: ghcr.io/gethomepage/homepage:latest
-        container_name: homepage
-        ports:
-          - 5999:3000
-        volumes:
-            - type: bind
-              source: ./config
-              target: /app/config
-              read_only: true
+        build:
+          context: .
+          dockerfile: Dockerfile
         restart: unless-stopped
         environment:
             - LOG_LEVEL=debug
