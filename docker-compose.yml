@@ -10,8 +10,8 @@ services:
             - ./config:/app/config
         restart: unless-stopped
         environment:
-            - PUID: "${USERID:-1000}"
-            - PGID: "${GROUPID:-1000}"
+            - PUID="${USERID:-1000}"
+            - PGID="${GROUPID:-1000}"
             - LOG_LEVEL=debug
             - HOMEPAGE_VAR_SPEEDTEST_HREF=${SPEEDTEST_HREF}
             - HOMEPAGE_VAR_SPEEDTEST_URL=${SPEEDTEST_URL}
